@@ -55,7 +55,7 @@ function modify_task {
 function add_task {
 	taskname=`rofi -dmenu -i -l 0 -p 'Name' -mesg 'Enter name of new task'`
 	taskdate=`rofi -dmenu -i -l 0 -p 'Date' -mesg 'Enter time and/or date of new task'`
-	$todoist_command add --priority "$(echo $taskdate)" "$(echo $taskname)" && notify 'Task successfully added.'
+	$todoist_command add --date "$(echo $taskdate)" "$(echo $taskname)" && notify 'Task successfully added.'
 	main_menu
 }
 
